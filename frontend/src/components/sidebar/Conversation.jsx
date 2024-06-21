@@ -4,11 +4,11 @@ import useGetConversations from '../../hooks/useGetConversations';
 const Conversation = ({Conversation , lastIdx , emoji}) => {
   const {selectedConversation, setSelectedConversation } = useGetConversations();
 
-  const isSelected =  selectedConversation._id === conversation._id;
+  const isSelected =  selectedConversation?._id === Conversation._id;
   return (
     <>
       <div className={`flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer
-        ${isSelected ?" bg-sky-500" : ""}
+        ${isSelected ? " bg-sky-500" : ""}
        `}
        onClick={() => setSelectedConversation(conversation)}
        >

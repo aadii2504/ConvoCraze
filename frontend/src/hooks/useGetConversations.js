@@ -1,5 +1,5 @@
 
-import React, { useState ,  useEffect } from 'react'
+import { useEffect, useState } from "react";
 import toast from 'react-hot-toast'
 
 
@@ -22,7 +22,7 @@ const useGetConversations = () => {
             } finally {
                 setLoading(false);
             }
-        }
+        };
 
 
 
