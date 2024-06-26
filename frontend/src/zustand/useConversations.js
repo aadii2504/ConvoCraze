@@ -3,8 +3,8 @@ import { create } from 'zustand'
 import React from 'react'
 
 const useConversations = create ((set) => ({
-        selectesConversation: null ,
-        setSelectesConversation: (selectesConversation) => set({ selectesConversation }) ,
+        selectedConversation: null,
+        setSelectedConversation: (selectedConversation) => set({ selectedConversation }),
         messages:[],
         setMessages: (messages) => set({ messages }),
 }))
