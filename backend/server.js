@@ -9,8 +9,9 @@ import userRoutes from "./routes/user.routes.js";
 
 
 import connectToMongodb from "./db/connectToMongodb.js";
+import { app, server } from "./socket/socket.js";
 
-const app = express();
+
 const PORT =  process.env.PORT || 5000;
 
 
@@ -31,7 +32,7 @@ app.get("/" ,(req, res) => {
 
 
 
-app.listen(PORT, () =>  {
+server.listen(PORT, () =>  {
     connectToMongodb();
     console.log(`Server is running on port ${PORT}`);
 });
