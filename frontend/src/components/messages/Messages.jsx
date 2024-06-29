@@ -10,8 +10,10 @@ const Messages = () => {
   
 
   useEffect(() => {
-    lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
-  },[])
+    setTimeout(() => {
+      lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
+    },50)
+  },[messages])
   return (
     <div className='px-4 flex-1 overflow-auto'>
 
